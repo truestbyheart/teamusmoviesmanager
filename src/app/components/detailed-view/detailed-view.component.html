@@ -1,0 +1,65 @@
+<div class="section group">
+  <div class="col span_1_of_3">
+    <div class="poster-img">
+      <img src="https://image.tmdb.org/t/p/w400/{{movieDetail.poster_path}}" alt="" class="poster-img__image">
+    </div>
+  </div>
+  <div class="col span_2_of_3">
+    <div class="mv-detail">
+      <h2 class="mv-detail__title">
+        {{movieDetail.original_title}}
+      </h2>
+      <div class="mv-detail__syn">
+        <h2>SYNOPSIS</h2>
+        <p class="syn-word">{{movieDetail.overview}}</p>
+      </div>
+      <div class="mv-detail__tags">
+        <ul class="tags">
+          <li *ngFor="let tags of genre">
+            <i class="icon-Tag"></i>{{tags.name}}
+          </li>
+        </ul>
+      </div>
+      <!--  <div class="mv-detail__cast" >
+        <ul class="cast-list">
+          <li class="cast-content" *ngFor="let cast of credits;let i=index">
+              <div class="cast-box" *ngIf="i<5">
+                  <img src="https://image.tmdb.org/t/p/w400/{{cast.profile_path}}" alt="" class="cast-img">
+              </div>
+              <div class="cast-name">
+                <p>{{cast.name}} as {{cast.character}}</p> 
+              </div>
+          </li>
+        </ul>
+      </div> -->
+
+      <div class="mv-detail__rates">
+        <ul class="rated-data">
+          <li><i class="icon-Video"></i>Status: {{movieDetail.status}}</li>
+          <li><i class="icon-Clock"></i>Runtime: {{movieDetail.runtime}}min</li>
+          <li><i class="icon-Users"></i> Language:
+            <ul class="lang-list">
+              <li *ngFor="let lang of language"> {{lang.name}}</li>
+            </ul>
+
+
+          </li>
+          <li><i class="icon-BarGraph"></i>Popularity:{{movieDetail.popularity}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="download-section">
+  <ul class="quality-card">
+    <li class="quality-item" *ngFor="let quality of Downlables">
+      <h2 class="quality-item__header"><i class="icon-video"></i> {{quality.quality}}</h2>
+      <p class="quality-item__size"><i class="icon-Document"></i> {{quality.size}}</p>
+      <a href="{{quality.url}}" class="btn btn-linked"><i class="la la-link"></i> Torrent</a>
+      <a [href]="gMagnet | safe: 'resourceUrl'"
+        class="btn btn-linked"><i class="la la-magnet"></i>Magnet</a>
+    </li>
+  </ul>
+
+
+</section>

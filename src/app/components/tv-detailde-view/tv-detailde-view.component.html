@@ -1,0 +1,73 @@
+<div class="section group">
+  <div class="col span_1_of_3">
+    <div class="poster-img">
+      <img src="https://image.tmdb.org/t/p/w400/{{tvdetail.poster_path}}" alt="" class="poster-img__image">
+    </div>
+  </div>
+  <div class="col span_2_of_3">
+    <div class="mv-detail">
+      <h2 class="mv-detail__title">
+        {{tvdetail.original_name}}
+      </h2>
+      <div class="mv-detail__syn">
+        <h2>SYNOPSIS</h2>
+        <p class="syn-word">{{tvdetail.overview}}</p>
+      </div>
+      <div class="mv-detail__tags">
+        <ul class="tags">
+          <li *ngFor="let tags of genre">
+            <i class="icon-Tag"></i>{{tags.name}}
+          </li>
+        </ul>
+      </div>
+      <div class="mv-detail__rates">
+        <ul class="rated-data">
+          <li><i class="icon-Video"></i>Status: {{tvdetail.status}}</li>
+          <li><i class="icon-BarGraph"></i>Popularity:{{tvdetail.popularity}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="episode-list">
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Episode</th>
+          <th>Size</th>
+          <th>Download</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+          <tr *ngFor="let episodes of episodes" class="tbody">
+              <td>{{episodes.episode}}</td>
+              <td>{{episodes.size}}</td>
+              <td><a href="{{episodes.url}}" class="btn btn-white-view-flat">download</a></td>
+            </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="made-with-love">
+      Made with
+      <i>♥</i> by
+      <a target="_blank" href="https://codepen.io/nikhil8krishnan">Nikhil Krishnan</a>
+    </div>
+  <!-- <table class="table-ep">
+    <tr class="thead">
+      <th>Episode</th>
+      <th>size</th>
+      <th>Download</th>
+    </tr>
+    <tr *ngFor="let episodes of episodes" class="tbody">
+      <td>{{episodes.episode}}</td>
+      <td>{{episodes.size}}</td>
+      <td></td>
+    </tr>
+  </table> -->
+</section>

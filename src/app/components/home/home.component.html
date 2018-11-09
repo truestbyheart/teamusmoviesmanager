@@ -1,0 +1,49 @@
+<div class="section group">
+  <div class="col span_1_of_3" *ngFor="let list of list">
+    <div class="movie-poster">
+      <div class="movie-poster__detail">
+        <h3 class="movie-box__title">
+
+
+          <ng-template *ngIf="list.original_title;then movie;else series">
+          </ng-template>
+
+          <ng-template #movie>{{list.original_title}}</ng-template>
+          <ng-template #series>{{list.original_name}}</ng-template>
+
+
+        </h3>
+        <ul class="movie-box__info">
+          <!--  <li *ngFor="let genre_ids of list.genre_ids">
+
+                        <div class="genre"  *ngIf="genre_ids == this.genre">
+                               {{this.genre}}
+                        </div>
+                    </li> -->
+          <ng-template *ngIf="list.release_date;then moviedate;else seriesdate">
+          </ng-template>
+
+          <ng-template #moviedate>
+            <li>Release Date:{{list.release_date}}</li>
+            <li>
+              <a class="btn btn-white-view" [routerLink]="[ '/detailView',list.id]">view</a>
+            </li>
+          </ng-template>
+          <ng-template #seriesdate>
+            <li>
+              First Aired on:{{list.first_air_date}}
+            </li>
+            <li>
+              <a class="btn btn-white-view" [routerLink]="[ '/tv-detailed-view',list.id]">view</a>
+            </li>
+          </ng-template>
+        </ul>
+      </div>
+      <div class="movie-poster__image">
+        <img src="https://image.tmdb.org/t/p/w400/{{list.poster_path}}" alt="{{list.original_title}}" class="movie-box__img">
+      </div>
+
+
+    </div>
+  </div>
+</div>

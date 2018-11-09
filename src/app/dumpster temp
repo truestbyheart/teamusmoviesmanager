@@ -1,0 +1,24 @@
+<div class="col-1-of-3 movie-box" *ngFor="let list of list">
+                <img src="https://image.tmdb.org/t/p/w500/{{list.poster_path}}" alt="{{list.original_title}}" class="movie-box__img">
+                <div class="movie-text__box">
+                    <h3 class="movie-box__title">
+
+
+                        <ng-template *ngIf="list.original_title;then movie;else series">
+                        </ng-template>
+
+                        <ng-template #movie>{{list.original_title}}</ng-template>
+                        <ng-template #series>{{list.original_name}}</ng-template>
+
+                    </h3>
+                    <ul class="movie-box__title--info">
+                        <li>Sci-fi,action</li>
+                        <li>{{list.release_date}}</li>
+                        <li>
+                            <a href="#" class="btn btn-white-view">view</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>

@@ -1,0 +1,18 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/base";
+
+@import "components/movie-box";
+@import "components/button";
+@import "components/quality-card";
+@import "components/nav-aside";
+@import "components/table";
+
+@import "layouts/header";
+@import "layouts/grid";
+@import "layouts/main";
+@import "layouts/sections";
+
+@import "pages/home";
+@import "pages/detail_view";

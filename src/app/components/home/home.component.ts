@@ -10,16 +10,19 @@ import { Router} from '@angular/router';
 export class HomeComponent implements OnInit {
   public list: Array<object> = [];
   public genre: Array<object> = [];
+  public pageload = true;
   constructor(private api: TmdbService, private router: Router) {}
 
   ngOnInit() {
+    setTimeout(() => {
+      this.pageload = false;
+    }, 3000);
     this.showPopular();
   }
 
   showPopular(): void {
     this.api.getTrending().subscribe((data: Array<object>) => {
       this.list = data['results'];
-      console.log(this.list);
     });
   }
 

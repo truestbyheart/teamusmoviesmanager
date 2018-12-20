@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { TmdbService } from '../../shared/tmdb.service';
 import { YtsService } from '../../shared/yts.service';
+import { TusService } from '../../shared/tus.service';
 import { SafeUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -21,16 +22,22 @@ export class DetailedViewComponent implements OnInit {
   private Downlables = [];
   private url: Array<object> = [];
   private gMagnet: Array<object> = [];
+  private link_1337: Array<object> = [];
+  private link_1337_gMagnet: Array<object> = [];
+  private name: String = 'movies';
+  link_1337_magnet: any;
   magnet: any;
   magnetHash: any;
   magnetUrl: any;
+  link_limetorrent: object[];
 
 
   constructor(
     private route: ActivatedRoute,
     private tmdb: TmdbService,
     private yts: YtsService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private tus: TusService
   ) {}
 
   ngOnInit() {
@@ -48,6 +55,8 @@ export class DetailedViewComponent implements OnInit {
       this.language = Data['spoken_languages'];
       this.passMe = this.movieDetail['original_title'];
       this.getDownloadFile(this.passMe);
+      this.getIt_1337(this.passMe);
+      this.getIt_limetorrent(this.passMe);
     });
   }
 
@@ -73,4 +82,21 @@ export class DetailedViewComponent implements OnInit {
   cleanURL(oldURL): SafeUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(oldURL);
   }
+
+  getIt_1337 (name: any) {
+    this.tus.getmovie_1337(name).subscribe((data: Array<object> ) => {
+       this.link_1337 = data;
+     for ( let i = 0; i < this.link_1337.length; i++) {
+        this.link_1337_magnet = data[i]['magnet'];
+      this.link_1337_gMagnet.push(this.link_1337_magnet);
+       }
+    });
+  }
+
+  getIt_limetorrent (name: any) {
+    this.tus.getmovie_limetorrent(name).subscribe((data: Array<object> ) => {
+       this.link_limetorrent = data;
+    });
+  }
+
 }

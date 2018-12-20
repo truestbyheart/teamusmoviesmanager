@@ -1,0 +1,74 @@
+.star{
+    &-detailed{
+        background-color: $rated-color;
+          
+    }
+    &-data{
+        margin-top: 0;
+        list-style: none;
+
+    }
+
+    &-link:link,
+    &-link:visited{
+        color: primary-theme-color;
+        text-decoration: none;
+        margin-left: 2%;
+        
+    }
+
+    &-link:hover{
+        color: $dark-grey;
+    }
+
+    &-info{
+        & span{
+            margin-left: 2%; 
+        }
+    }
+
+    &-aka{
+        list-style: none;
+
+        & li{
+            float: left;
+            margin-left: 4px;
+            background-color: $primary-theme-color-lt;
+            border-radius: 4px;
+        }
+    }
+
+    &-history{
+        background-color:$rated-color;
+        width: 100%;
+        margin-left: 0;
+        color: $primary-color;
+
+        &__text{
+            margin: 1%;
+            text-align: justify;
+        }
+    }
+
+    &-biography{
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 1px solid $primary-color;
+    }
+
+    
+}
+
+.film{
+
+color:$primary-color;
+  & h2{
+    border-bottom: 1px solid $primary-color;
+}
+}
+
+
+
+
+ 
+    

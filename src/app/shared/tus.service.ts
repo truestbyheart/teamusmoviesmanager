@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class TusService {
   private api_key = 'b8d25429d24bd53e8efe9922190e3e91';
-  private api_root = 'http://localhost:3000/todaytvseries/';
+  private api_root = 'http://localhost/scrape/index.php';
 
   constructor(private http: HttpClient) { }
 
@@ -18,6 +19,14 @@ export class TusService {
  }
 
  getEpisodes(name: any) {
- return this.http.get(`${this.api_root}${name}`);
+ return this.http.get(`${this.api_root}/todaytvseries/${name}`);
+ }
+
+ getmovie_1337(name: any) {
+  return this.http.get(`${this.api_root}/1337x/${name}`);
+ }
+
+ getmovie_limetorrent(name: any) {
+  return this.http.get(`${this.api_root}/limetorrent/${name}`);
  }
 }

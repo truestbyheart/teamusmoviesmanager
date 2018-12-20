@@ -1,0 +1,116 @@
+<div class="section group from-top-4">
+  <div class="col span_1_of_3">
+    <div class="poster-img">
+      <img src="https://image.tmdb.org/t/p/w400/{{personal.profile_path}}" alt="" class="poster-img__image">
+    </div>
+  </div>
+  <div class="col span_2_of_3">
+    <div class="mv-detail">
+      <h2 class="mv-detail__title">
+        {{personal.name}}
+      </h2>
+      <div class="star-detailed">
+        <ul class="star-data">
+          <li>Name: {{personal.name}}</li>
+          <li>Also known as:
+            <ul class="star-aka clearfix">
+              <li *ngFor="let name of aka"> {{name}}</li>
+            </ul>
+          </li>
+          <li>
+            <p class="star-info">BirthDate:<span>{{personal.birthday}}</span></p>
+          </li>
+          <li>
+            <p class="star-info">Place of birth: <span>{{personal.place_of_birth}}</span></p>
+          </li>
+          <li>
+            <p class="star-info">DeathDate:<span>{{personal.deathday}}</span></p>
+          </li>
+          <li>
+            <p class="star-info">Popularity:<span>{{personal.popularity}}</span></p>
+          </li>
+          <li>Homepage:<a href="{{personal.homepage}}" class="star-link">{{personal.homepage}}</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="star-history">
+  <div class="star-biography">
+    <h2>BIOGRAPHY</h2>
+  </div>
+  <p class="star-history__text">
+    {{personal.biography}}
+  </p>
+</section>
+
+<section class="film">
+  <h2>Cast</h2>
+  <div id="container">
+    <div class="overlay-left"></div>
+    <div class="overlay-right"></div>
+    <div id="grid" class="image-cropper">
+      <div class="img" *ngFor="let url of Act; let i = index">
+        <div class="img-info">
+          <h3 class="img-info__title">
+            <ng-template *ngIf="url.original_title;then movie;else series">
+            </ng-template>
+
+            <ng-template #movie>{{url.original_title}}</ng-template>
+            <ng-template #series>{{url.original_name}}</ng-template>
+
+
+          </h3>
+          <ul class="img-info__list">
+            <ng-template *ngIf="url.release_date;then moviedate;else seriesdate">
+            </ng-template>
+
+            <ng-template #moviedate>
+              <li>Character:{{url.character}}</li>
+              <li>Release Date:{{url.release_date}}</li>
+              <li>
+                <a class="btn btn-white-view" [routerLink]="[ '/detailView',url.id]">view</a>
+              </li>
+            </ng-template>
+            <ng-template #seriesdate>
+                <li>Release Date:{{url.character}}</li>
+              <li>
+                First Aired on:{{url.first_air_date}}
+              </li>
+              <li>
+                <a class="btn btn-white-view" [routerLink]="[ '/tv-detailed-view',url.id]">view</a>
+              </li>
+            </ng-template>
+          </ul>
+        </div>
+
+        <ng-template *ngIf="url.poster_path!= null;then showPoster;else hidePoster"></ng-template>
+
+
+        <ng-template #showPoster>
+          <img [@move]="state" (@move.done)="onFinish($event)" (@move.start)="onStart($event)" [attr.class]="i" src="https://image.tmdb.org/t/p/w400/{{url.poster_path}}"
+          alt="" />
+        </ng-template>
+        <ng-template #hidePoster>
+          <div class="no-poster">
+              <h4>No poster found</h4>
+          </div>
+          
+         
+        </ng-template>
+        
+      </div>
+
+    </div>
+    <div>
+      <a id="slider-buttons-left" (click)="moveLeft()">&#10094;</a>
+      <a id="slider-buttons-right" (click)="moveRight()">&#10095;</a>
+    </div>
+  </div>
+
+</section>
+
+
+

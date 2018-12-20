@@ -15,6 +15,7 @@ export class TvDetaildeViewComponent implements OnInit {
   private sub: any;
   private id: number;
   private genre: any;
+  private series = 'series';
   language: any;
   name: any;
 
@@ -26,9 +27,8 @@ export class TvDetaildeViewComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id'];
     });
-    console.log(this.id);
     this.getInfo();
-    this.getep(this.name);
+
   }
 
   getInfo() {
@@ -36,16 +36,9 @@ export class TvDetaildeViewComponent implements OnInit {
      this.tvdetail = data;
      this.genre = data['genres'];
      this.name = data['original_name'];
-     console.log(typeof this.name);
-     this.getep(this.name);
+     console.log(this.name);
     });
   }
 
-  getep(name: string) {
-    this.tus.getEpisodes(name).subscribe((eps: Array<object>) => {
-      this.episodes = eps;
-      console.log(this.episodes);
-    });
-  }
 
 }

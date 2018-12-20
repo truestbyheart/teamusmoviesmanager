@@ -1,15 +1,21 @@
-<div class="nav-container">
-  <ul class="nav-aside">
-    <li><a routerLink="Home">
-        <i class="la la-Home"></i>Home
-      </a></li>
-    <li><a routerLink="Home">
+<div class="nav-menu clearfix">
+  <ul class="nav-list ">
+    <li class="nav-item"><a href="#" class="nav-link" routerLink="Home"><i class="la la-home"></i>Home</a></li>
+    <li class="nav-item">
+      <a href="#" routerLink="Browse/1" class="nav-link">
         <i class="la la-film"></i>Browse
-      </a></li>
-    <li><a routerLink="Home">
-        <i class="la la-search"></i>Search
-      </a></li>
-    <li><a routerLink="Home"> <i class="la la-info-circle"></i>About Us
-      </a></li>
+      </a>
+      </li>
+    <li class="nav-item"><a href="javascript:void(0)" (click)="showbar()" class="nav-link" ><i class="la la-search"></i>Search</a></li>
+    <li class="nav-item"><a href="" class="nav-link"><i class="la la-info-circle"></i>About-Us</a></li>
+    <li class="nav-item" *ngIf="showBar">
+      <div class="search-area">
+     
+        <input (keydown.enter)="goToSearch(search.value)"  type="text" class="search-area__box" #search>
+          <a class="search-area__icon"><i class="la la-search"></i></a>
+      </div>
+    </li>
   </ul>
 </div>
+
+

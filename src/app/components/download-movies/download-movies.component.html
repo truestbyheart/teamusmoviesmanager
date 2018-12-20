@@ -1,0 +1,74 @@
+<section class="download-section">
+    <mat-tab-group class="tab-menu">
+    <mat-tab label="YTS HD">
+      <div class="breathing-space">
+          <div class="tbl-header">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                  <tr>
+                    <th>Quality</th>
+                    <th>Size</th>
+                    <th>Torrent</th>
+                    <th>Magnet</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="tbl-content">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                  <tr *ngFor="let quality of Downlables" class="tbody">
+                    <td>{{quality.quality}}</td>
+                    <td>{{quality.size}}</td>
+                    <td><a href="{{quality.url}}" class="btn btn-linked"><i class="la la-link"></i> Torrent</a></td>
+                    <td><a [href]="gMagnet | safe: 'resourceUrl'" class="btn btn-linked"><i class="la la-magnet"></i>Magnet</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+      </div>
+      
+      
+    </mat-tab>
+    <mat-tab label="1337x"> 
+      <div class="breathing-space">
+        <div class="center-me notice">
+            *the size value is still in perfection
+        </div>
+          
+          <div class="tbl-header">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Seeds</th>
+                    <th>Leeches</th>
+                    <th>Magnet</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="tbl-content">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                  <tr *ngFor="let quality of link_1337" class="tbody">
+                    <td class="lengthy">{{quality.name}}</td>
+                    <td>{{quality.size}}</td>
+                    <td>{{quality.seed}}</td>
+                    <td>{{quality.leeches}}</td>
+                    <td><a [href]="link_1337_gMagnet | safe: 'resourceUrl'" class="btn btn-linked"><i class="la la-magnet"></i>Magnet</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+      </div>
+     
+    </mat-tab>
+  </mat-tab-group>
+  <div class="made-with-love">
+      Made with
+      <i>♥</i> by
+      <a target="_blank" href="https://codepen.io/nikhil8krishnan">Nikhil Krishnan</a>
+    </div>
+</section>

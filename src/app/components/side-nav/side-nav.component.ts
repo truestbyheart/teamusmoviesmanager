@@ -12,4 +12,9 @@ export class SideNavComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  searchTerm(term) {
+    console.log(term);
+  }
+
 }

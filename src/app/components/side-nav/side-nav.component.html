@@ -1,15 +1,18 @@
-<div class="nav-container">
-  <ul class="nav-aside">
-    <li><a routerLink="Home">
-        <i class="la la-Home"></i>Home
-      </a></li>
-    <li><a routerLink="Home">
-        <i class="la la-film"></i>Browse
-      </a></li>
-    <li><a routerLink="Home">
-        <i class="la la-search"></i>Search
-      </a></li>
-    <li><a routerLink="Home"> <i class="la la-info-circle"></i>About Us
-      </a></li>
+<nav>
+  <ul class="nav-list clearfix">
+    <li><a href="" routerLink="Home">Home</a></li>
+    <li><a href="">Browse</a></li>
+    <li><a href="">Contact Us</a></li>
+    <li>
+      <div class="wrap">
+        <div class="search">
+           <input type="text" id="search" class="searchTerm" placeholder="What are you looking for?">
+           <button type="submit" class="searchButton" (click)="searchTerm(search.value)">
+             <i class="fa fa-search"></i>
+          </button>
+        </div>
+     </div>
+    </li>
   </ul>
-</div>
+</nav>
+

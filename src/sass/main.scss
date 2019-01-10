@@ -1,9 +1,11 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/utilities";
+@import "abstracts/animations";
 
 @import "base/base";
 @import "base/typography";
+@import "base/headings";
 
 @import "components/movie-box";
 @import "components/button";
@@ -27,3 +29,7 @@
 
 
 @import "pages/detail_view";
+
+@import "responsive/global";
+@import "responsive/nav";
+@import "responsive/search";

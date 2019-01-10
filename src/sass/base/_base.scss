@@ -1,8 +1,12 @@
-html {
-  font-size: 14px;
+html,
+body{
+	@include font-size(.6);
   color: $primary-color;
+  background-color: $main-color;
+  
 }
 
-body{
-  background-color: $main-color;
+
+#page{
+  padding: 1.2em;
 }

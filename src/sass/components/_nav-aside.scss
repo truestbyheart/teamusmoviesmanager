@@ -9,7 +9,7 @@
    
     &-list{
         list-style: none;
-        font-size: 20px;
+        @include font-size(1);
         text-transform: uppercase;
     }
 
@@ -39,8 +39,10 @@
 
 }
 
+
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
 }
+

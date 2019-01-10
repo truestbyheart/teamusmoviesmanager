@@ -6,7 +6,7 @@
         <i class="la la-film"></i>Browse
       </a>
       </li>
-    <li class="nav-item"><a href="javascript:void(0)" (click)="showbar()" class="nav-link" ><i class="la la-search"></i>Search</a></li>
+    <li class="nav-item"><a href="javascript:void(0)" (click)="showbar()" class="nav-link hidden-value" ><i class="la la-search"></i>Search</a></li>
     <li class="nav-item"><a href="" class="nav-link"><i class="la la-info-circle"></i>About-Us</a></li>
     <li class="nav-item" *ngIf="showBar">
       <div class="search-area">
@@ -16,6 +16,18 @@
       </div>
     </li>
   </ul>
+ 
 </div>
 
+<div class="show" *ngIf="showBar">
+  <div class="search-tablet">   
+    <input (keydown.enter)="goToSearch(search.value)"  type="text" class="search-tablet__box" #search>
+      
+  </div>
+  
+</div>
+<input (keydown.enter)="goToSearch(search.value)"  type="text" class="search-mobile__box" #search>
+<div class="show-mobile-480-px">
+  <a class="search-mobile__link"><i class="la la-search"></i></a>     
+</div>
 

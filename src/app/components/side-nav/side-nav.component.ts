@@ -8,16 +8,24 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   animations: [
     trigger('slideIn', [
       state('hidden', style({
-      display: 'none',
-      width: '0',
-      padding: '0'
-      }))
+      opacity: '0',
+      })),
+      state('displayed', style({
+        opacity: '1',
+        margin: '152% 0 0 40%',
+        transform: 'rotateZ(0deg)'
+      })),
+
+      transition('hidden <=> displayed', animate('880ms ease-in' , style({
+        margin: '173% 0 0 43%', transform: 'rotateZ(-45deg)', opacity: '1'
+      })))
     ])
   ]
 })
 export class SideNavComponent implements OnInit {
   private showBar: Boolean = false;
   requestId: any;
+  state = 'hidden';
 
   constructor(
     private router: Router,
@@ -35,5 +43,9 @@ export class SideNavComponent implements OnInit {
 
   showbar() {
     this.showBar = !this.showBar;
+  }
+
+  showMe() {
+   this.state = this.state === 'hidden' ? 'displayed' : 'hidden';
   }
 }

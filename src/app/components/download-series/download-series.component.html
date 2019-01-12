@@ -1,33 +1,44 @@
 <section class="episode-list">
   <app-loading *ngIf="loading"></app-loading>
-  <div *ngIf="!loading">
-    <div class="tbl-header">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <thead>
-          <tr>
-            <th>Episode</th>
-            <th>Size</th>
-            <th>Download</th>
-          </tr>
-        </thead>
-      </table>
+  <div *ngIf="!loading" class="series-section">
+    <div class="breathing-space">
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <thead>
+                <tr>
+                  <th>Episode</th>
+                  <th>Size</th>
+                  <th>Download</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tbody>
+                  <tr *ngFor="let episodes of series" class="tbody">
+                      <td>{{episodes.episode}}</td>
+                      <td>{{episodes.size}}</td>
+                      <td><a href="{{episodes.url}}" class="btn btn-white-view-flat">download</a></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="made-with-love">
+              Made with
+              <i>♥</i> by
+              <a target="_blank" href="https://codepen.io/nikhil8krishnan">Nikhil Krishnan</a>
+            </div>
     </div>
-    <div class="tbl-content">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <tbody>
-            <tr *ngFor="let episodes of series" class="tbody">
-                <td>{{episodes.episode}}</td>
-                <td>{{episodes.size}}</td>
-                <td><a href="{{episodes.url}}" class="btn btn-white-view-flat">download</a></td>
-              </tr>
-        </tbody>
+    <table class="table-list">
+        <tr *ngFor="let episodes of series" class="tbody">
+            <td class="table-list__item">{{episodes.episode}}</td>
+            <td class="table-list__item">{{episodes.size}}</td>
+            <td class="table-list__item"><a href="{{episodes.url}}">
+                <i class="la la-cloud-download"></i>
+            </a></td>
+       </tr>
       </table>
-    </div>
-    <div class="made-with-love">
-        Made with
-        <i>♥</i> by
-        <a target="_blank" href="https://codepen.io/nikhil8krishnan">Nikhil Krishnan</a>
-      </div>
   </div>
 
 

@@ -1,40 +1,6 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .hidden-value {
-    display: none;
-  }
-  .search-tablet {
-    display: none;
-  }
-  .show-mobile-480-px {
-    display: block;
-    background-color: $primary-theme-color-lt;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    text-align: center;
-    z-index: 3000;
-    position: fixed;
-    margin: 85% 0 0 85%;
-
-    & i {
-      font-size: 30px;
-      margin: 10%;
-    }
-  }
-
-  input.search-mobile__box {
-    width: 55%;
-    padding: 8px 0;
-    margin: 110% 0 0 62%;
-    z-index: 3000;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    position: fixed;
-    display: block;
-    transform: rotateZ(-90deg);
-  }
+  /* Styles */
 }
 
 /* Smartphones (landscape) ----------- */
@@ -49,30 +15,7 @@
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .search-area {
-    display: none;
-  }
-  .search-tablet {
-    margin: 1% 30% 0 30%;
-    position: relative;
-    display: block;
-    &__box {
-      padding: 7px 48px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      position: absolute;
-    }
-
-    &__icon {
-      position: absolute;
-      color: $primary-dark;
-      @include font-size(0.7);
-    }
-  }
-
-  .show-mobile-480-px {
-    display: none;
-  }
+  /* Styles */
 }
 
 /* iPads (landscape) ----------- */
@@ -85,8 +28,8 @@
   /* Styles */
 }
 /**********
-  iPad 3
-  **********/
+    iPad 3
+    **********/
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   /* Styles */
 }
@@ -178,45 +121,52 @@
 
 /* Samsung Galaxy S5 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  .search-area {
-    display: none;
-  }
-  .search-tablet {
-    margin: 1% 30% 0 30%;
-    position: relative;
-    display: block;
-    &__box {
-      width: 100%;
-      padding: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      position: absolute;
-    }
-
-    &__icon {
-      position: absolute;
-      color: $primary-dark;
-      @include font-size(0.7);
-    }
-  }
+    .star-aka li {
+        margin-left: 6px;
+        margin-top: 2%;
+      }
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  .show-mobile-480-px {
-    margin: 150% 0 0 85%;
+  .poster-img__image {
+    width: 217%;
   }
 
-  input.search-mobile__box {
-    width: 55%;
-    padding: 8px 0;
-    margin: 176% 0px 0px 63%;
-    z-index: 3000;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    position: fixed;
-    display: block;
-    -webkit-transform: rotateZ(-90deg);
-    transform: rotateZ(-90deg);
+  .star-aka li {
+    margin-left: 10px;
+    margin-top: 2%;
+  }
+
+  .star-page {
+    margin-top: 15%;
+  }
+
+  .film {
+    margin: 1px;
+
+    & h2 {
+      text-align: center;
+    }
+  }
+
+  .image-cropper .img {
+    max-width: 100%;
+  }
+
+  .img-info__list li {
+    margin-left: -40px;
+    font-size: 1.1em;
+  }
+  #slider-buttons-left {
+    color: $primary-color;
+    padding: 2rem 1.4rem;
+    background-color: transparent;
+    border-radius: 0.8rem;
+  }
+  #slider-buttons-right {
+    color: $primary-color;
+    padding: 2rem 1.4rem;
+    background-color: transparent;
+    border-radius: 0.8rem;
   }
 }

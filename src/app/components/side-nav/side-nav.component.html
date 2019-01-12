@@ -1,13 +1,20 @@
 <div class="nav-menu clearfix">
   <ul class="nav-list ">
-    <li class="nav-item"><a href="#" class="nav-link" routerLink="Home"><i class="la la-home"></i>Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link" routerLink="Home"><i class="la la-home"></i>
+      <p>Home</p>
+    </a></li>
     <li class="nav-item">
       <a href="#" routerLink="Browse/1" class="nav-link">
-        <i class="la la-film"></i>Browse
+        <i class="la la-film"></i>
+        <p>Browse</p>
       </a>
       </li>
-    <li class="nav-item"><a href="javascript:void(0)" (click)="showbar()" class="nav-link hidden-value" ><i class="la la-search"></i>Search</a></li>
-    <li class="nav-item"><a href="" class="nav-link"><i class="la la-info-circle"></i>About-Us</a></li>
+    <li class="nav-item"><a href="javascript:void(0)" (click)="showbar()" class="nav-link hidden-value" ><i class="la la-search"></i>
+     <p>Search</p> 
+    </a></li>
+    <li class="nav-item"><a href="" class="nav-link"><i class="la la-info-circle"></i>
+      <p>About-Us</p>
+    </a></li>
     <li class="nav-item" *ngIf="showBar">
       <div class="search-area">
      
@@ -26,8 +33,8 @@
   </div>
   
 </div>
-<input (keydown.enter)="goToSearch(search.value)"  type="text" class="search-mobile__box" #search>
-<div class="show-mobile-480-px">
-  <a class="search-mobile__link"><i class="la la-search"></i></a>     
-</div>
+<input  (keydown.enter)="goToSearch(search.value)" [@slideIn]='state' type="text" class="search-mobile__box" #search>
+<a class="show-mobile-480-px"  (click)='showMe()'>
+ <i class="la la-search"></i>     
+</a>
 

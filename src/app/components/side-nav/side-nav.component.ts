@@ -19,6 +19,21 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
       transition('hidden <=> displayed', animate('880ms ease-in' , style({
         margin: '173% 0 0 43%', transform: 'rotateZ(-45deg)', opacity: '1'
       })))
+    ]),
+    trigger('slideIn375', [
+      state('hidden', style({
+      opacity: '0',
+      margin: '220% 0px 0px 64%'
+      })),
+      state('displayed', style({
+        opacity: '1',
+        margin: '193% 0px 0px 34%',
+        transform: 'rotateZ(0deg)'
+      })),
+
+      transition('hidden <=> displayed', animate('880ms ease-in' , style({
+        margin: '212% 0px 0px 45%', transform: 'rotateZ(-45deg)', opacity: '1'
+      })))
     ])
   ]
 })

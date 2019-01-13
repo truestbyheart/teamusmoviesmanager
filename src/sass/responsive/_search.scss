@@ -146,7 +146,26 @@
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  input.search-mobile__box {
+    display: none;
+  }
+  .search-area {
+    display: none;
+  }
+
+  .search-mobile__375px{
+    width: 55%;
+    padding: 8px 0;
+    margin: 193% 0px 0px 88%;
+    z-index: 3000;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    position: fixed;
+    display: block;
+    -webkit-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+  }
 }
 
 /* iPhone XS Max, XR ----------- */

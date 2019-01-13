@@ -85,11 +85,32 @@
 
 /* iPhone X ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+
+  .syn-word{
+      text-align: justify;
+  }
+
+  iframe{
+    width: 720px !important;
+    height: 300px !important;
+  }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  .syn-word{
+    text-align: justify;
+    padding: 1px;
+}
+
+.detailed-page{
+  margin-top: 23%;
+}
+
+iframe {
+  width: 338px !important;
+  height: 200px !important;
+  margin-left: -32px;
+}
 }
 
 /* iPhone XS Max, XR ----------- */

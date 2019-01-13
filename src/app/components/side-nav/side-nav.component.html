@@ -34,6 +34,7 @@
   
 </div>
 <input  (keydown.enter)="goToSearch(search.value)" [@slideIn]='state' type="text" class="search-mobile__box" #search>
+<input  (keydown.enter)="goToSearch(keyword.value)" [@slideIn375]='state' type="text" class="search-mobile__375px" #keyword>
 <a class="show-mobile-480-px"  (click)='showMe()'>
  <i class="la la-search"></i>     
 </a>

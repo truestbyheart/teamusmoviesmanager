@@ -101,11 +101,23 @@
 
 /* iPhone X ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  .movie-list{
+    margin-top: -226%;
+  }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  .movie-list{
+    margin-top: 23%;
+  }
+
+  .show-mobile-480-px {
+    margin: 192% 0 0 85%;
+}
+
+.spinner{
+  margin: 59% 0 0 -13%;
+}
 }
 
 /* iPhone XS Max, XR ----------- */
@@ -181,5 +193,9 @@
     &__detail {
       width: 88%;
     }
+  }
+
+  .spinner{
+    margin: 68% 0 0 -2%;
   }
 }

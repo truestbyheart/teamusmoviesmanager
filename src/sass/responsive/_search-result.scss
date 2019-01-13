@@ -104,11 +104,80 @@
 
 /* iPhone X ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  .img-info__list li {
+    margin-left: -40px;
+    font-size: 1.2em;
+  }
+
+  .film {
+    margin: 1% 9px 0% 3px;
+    & h2{
+      margin-bottom: -7%;
+      text-align: center;
+    }
+  }
+  .star-page{
+    margin-top: 0%;
+  }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  .search-result {
+    margin-top: 23%;
+    &__list {
+      margin-left: -9%;
+    }
+    &__thumbnail {
+      width: 88%;
+    }
+
+    &__info:first-child {
+      font-size: 18px;
+    }
+
+    &__info {
+      font-size: 13px;
+    }
+  }
+
+  .star-page {
+    margin-top: 23%;
+  }
+
+  .poster-img__image {
+    width: 216%;
+  }
+
+  h2 {
+    font-size: 1.6em;
+    margin-bottom: 0;
+  }
+
+  .image-cropper .img {
+    max-width: 100%;
+  }
+
+  .img-info {
+    & h3 {
+      font-size: 1.2em;
+    }
+    &__list li {
+      margin-left: -40px;
+      font-size: 10px;
+      margin-top: 10%;
+    }
+  }
+  .btn-white-view {
+    padding: 5px 27px;
+}
+
+  .film {
+    margin: 1% 9px 0% 3px;
+    & h2{
+      margin-bottom: -18%;
+      text-align: center;
+    }
+  }
 }
 
 /* iPhone XS Max, XR ----------- */

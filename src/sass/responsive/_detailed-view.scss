@@ -85,11 +85,117 @@
 
 /* iPhone X ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  .browse,
+  .series-detail,
+  .detailed-page,
+  .search-result,
+  .full-cast {
+    margin-top: -226%;
+  }
+
+  .cast {
+    font-size: 1.2em;
+    & a {
+      color: $primary-color;
+    }
+
+    &-full {
+      color: $primary-dark !important;
+    }
+  }
+
+  .choice-btn {
+    margin-left: -18%;
+  }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  .breathing-space,
+  .made-with-love {
+    display: none;
+  }
+
+  .browse,
+  .series-detail,
+  .detailed-page,
+  .search-result,
+  .full-cast {
+    margin-top: 23%;
+  }
+
+  .nav-menu {
+    height: 7.57%;
+}
+
+  .choice-btn {
+    margin-bottom: -16%;
+  }
+
+  .table {
+    &-list {
+      &__item {
+        font-size: 1.2em;
+        & a {
+          text-decoration: none;
+          color: $primary-color;
+          padding: 1.2em 1.4em;
+
+          & i {
+            font-size: 2.3em;
+          }
+        }
+      }
+    }
+  }
+  .cast {
+    font-size: 1.2em;
+    & a {
+      color: $primary-color;
+    }
+
+    &-full {
+      color: $primary-dark !important;
+    }
+  }
+  .tab-menu {
+    width: 120%;
+    margin-left: -38px;
+  }
+  .download-section {
+    height: 50vh;
+  }
+
+  .cast-section {
+    margin: 0 1% 0 1%;
+    font-size: 1.4em;
+  }
+  .cast-area {
+    margin: 0 1% 0 1%;
+    font-size: 1.4em;
+  }
+  .cast-img {
+    width: 81%;
+  }
+
+  .series-section {
+    margin-left: -38px;
+    width: 130%;
+  }
+
+  .tags li:not(:last-child) {
+    margin-right: 6px;
+  }
+  .mv-detail__rates {
+    height: 20vh;
+  }
+
+  .rated-data {
+    padding: 4%;
+    font-size: 1.4em;
+  }
+  .lang-list li {
+    margin: 2% 2% 2% 0 !important;
+  }
 }
 
 /* iPhone XS Max, XR ----------- */
@@ -148,14 +254,13 @@
       }
     }
   }
-
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  .detailed-page,.series-detail {
+  .detailed-page,
+  .series-detail {
     margin-top: 15%;
   }
-
 
   .syn-word {
     font-size: 1.2em;

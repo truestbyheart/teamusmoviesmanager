@@ -58,7 +58,43 @@
 
 /* iPhone 5 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  .table {
+    &-list {
+      &__item {
+        font-size: 1.2em;
+        & a {
+          text-decoration: none;
+          color: $primary-color;
+          padding: 1.2em 1.4em;
+
+          & i {
+            font-size: 2.3em;
+          }
+        }
+      }
+    }
+  }
+
+  .breathing-space,
+  .made-with-love {
+    display: none;
+  }
+  iframe {
+    width: 480px;
+    height: 300px;
+    margin-left: -10px;
+  }
+
+  .cast {
+    font-size: 1.2em;
+    & a {
+      color: $primary-color;
+    }
+
+    &-full {
+      color: $primary-dark !important;
+    }
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
@@ -89,7 +125,8 @@
   .series-detail,
   .detailed-page,
   .search-result,
-  .full-cast {
+  .full-cast,
+  .star-page {
     margin-top: -226%;
   }
 
@@ -125,7 +162,7 @@
 
   .nav-menu {
     height: 7.57%;
-}
+  }
 
   .choice-btn {
     margin-bottom: -16%;
@@ -258,10 +295,16 @@
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
   .detailed-page,
-  .series-detail {
-    margin-top: 15%;
+  .series-detail,
+  .browse,
+  .star-page {
+    margin-top: -206%;
   }
 
+  .choice-btn {
+    margin: -11% 0 0% 0%;
+    padding: 1rem 8rem;
+  }
   .syn-word {
     font-size: 1.2em;
     text-align: justify;
@@ -307,6 +350,12 @@
   }
   .download-section {
     height: 50vh;
+  }
+
+  .cast{
+    &-full {
+      color: $primary-dark !important;
+    }
   }
 
   .cast-section {

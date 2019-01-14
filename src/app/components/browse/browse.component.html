@@ -25,7 +25,7 @@
   
   <app-loading *ngIf="pageload"></app-loading>
   <div *ngIf="!pageload">
-    <section class="movie-list" *ngIf="movie">
+    <section *ngIf="movie">
       <div class="section group">
         <div class="col span_1_of_3" *ngFor="let list of movies; let i = index">
           <div class="movie-poster" *ngIf="i <= 20">
@@ -56,7 +56,7 @@
       </div>
     </section>
   
-    <section class="movie-list" *ngIf="series">
+    <section *ngIf="series">
       <div class="section group">
         <div
           class="col span_1_of_3"

@@ -74,7 +74,22 @@
 
 /* iPhone 5 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  .series-detail,
+  .detailed-page,
+  .search-result,
+  .full-cast,
+  .movie-list {
+    margin-top: -227%;
+    margin-left: 0;
+  }
+
+  .btn-white-view {
+    padding: 7px 34px;
+  }
+
+  .movie-box__info li {
+    margin-left: -14px;
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
@@ -101,23 +116,23 @@
 
 /* iPhone X ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  .movie-list{
+  .movie-list {
     margin-top: -226%;
   }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  .movie-list{
+  .movie-list {
     margin-top: 23%;
   }
 
   .show-mobile-480-px {
     margin: 192% 0 0 85%;
-}
+  }
 
-.spinner{
-  margin: 59% 0 0 -13%;
-}
+  .spinner {
+    margin: 59% 0 0 -13%;
+  }
 }
 
 /* iPhone XS Max, XR ----------- */
@@ -195,7 +210,7 @@
     }
   }
 
-  .spinner{
+  .spinner {
     margin: 68% 0 0 -2%;
   }
 }

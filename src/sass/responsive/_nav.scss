@@ -88,11 +88,35 @@
 
 /* iPhone 5 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  .nav {
+    &-menu {
+      height: 20.4%;
+    }
+    &-item {
+      padding: 6px 0;
+    }
+    &-link {
+      padding: 14px 10px !important;
+      & p {
+        display: inline-block !important;
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  .nav {
+    &-menu {
+      height: 9.4%;
+    }
+    &-link {
+      padding: 14px 46px !important;
+      display: inline-block;
+      & p {
+        display: none;
+      }
+    }
+  }
 }
 
 /* iPhone 6, 7, 8 ----------- */
@@ -102,33 +126,21 @@
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
   .nav {
-    &-menu{
+    &-menu {
       height: 7.6%;
     }
-    &-link{
-        padding: 14px 46px !important;
-        display: inline-block;
-      & p{
-          display: none;
+    &-link {
+      padding: 14px 46px !important;
+      display: inline-block;
+      & p {
+        display: none;
       }
-        }
+    }
   }
 }
 
 /* iPhone 6+, 7+, 8+ ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
- .nav {
-    &-menu{
-      height: 9.4%;
-    }
-    &-link{
-        padding: 14px 46px !important;
-        display: inline-block;
-      & p{
-          display: none;
-      }
-        }
-  }
 }
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
@@ -142,17 +154,17 @@
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
   .nav {
-    &-menu{
+    &-menu {
       height: 9.4%;
     }
-    &-link{
-        padding: 14px 46px !important;
-        display: inline-block;
-      & p{
-          display: none;
+    &-link {
+      padding: 14px 46px !important;
+      display: inline-block;
+      & p {
+        display: none;
       }
-        }
-  }  /* Styles */
+    }
+  } /* Styles */
 }
 
 /* iPhone XS Max, XR ----------- */
@@ -184,29 +196,27 @@
 
 /* Samsung Galaxy S5 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-
-    .nav {
-
-        &-link{
-            padding: 14px 20px !important;
-          & p{
-              display: inline-block;
-          }
-            }
+  .nav {
+    &-link {
+      padding: 14px 20px !important;
+      & p {
+        display: inline-block;
       }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
   .nav {
-    &-menu{
+    &-menu {
       height: 9.4%;
     }
-    &-link{
-        padding: 14px 46px !important;
-        display: inline-block;
-      & p{
-          display: none;
+    &-link {
+      padding: 14px 46px !important;
+      display: inline-block;
+      & p {
+        display: none !important;
       }
-        }
+    }
   }
 }

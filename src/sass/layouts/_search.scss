@@ -1,5 +1,4 @@
 .search-result {
-  margin-top: 4%;
   color: $primary-color;
 
   & h1{
@@ -14,6 +13,9 @@
     & li {
       border-bottom: 1px solid $primary-color;
       background-color: rgba($color: $primary-dark, $alpha: .8);
+       & a{
+        color: $primary-color;
+       }
     }
 
     &__detail {

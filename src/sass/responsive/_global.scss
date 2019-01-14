@@ -58,11 +58,23 @@
     
     /* iPhone 5 ----------- */
     @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-    /* Styles */
+        html,
+        body{
+            @include font-size(.6);
+          color: $primary-color;
+          background-color: $main-color;
+          
+        }
     }
     
     @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    /* Styles */
+        html,
+        body{
+            @include font-size(.6);
+          color: $primary-color;
+          background-color: $main-color;
+          
+        }
     }
     
     /* iPhone 6, 7, 8 ----------- */
@@ -85,11 +97,23 @@
     
     /* iPhone X ----------- */
     @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-
+        html,
+        body{
+            @include font-size(.6);
+          color: $primary-color;
+          background-color: $main-color;
+          
+        }
     }
     
     @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-
+        html,
+        body{
+            @include font-size(.6);
+          color: $primary-color;
+          background-color: $main-color;
+          
+        }
     }
     
     /* iPhone XS Max, XR ----------- */
@@ -121,10 +145,22 @@
     
     /* Samsung Galaxy S5 ----------- */
     @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-
+        html,
+        body{
+            @include font-size(.6);
+          color: $primary-color;
+          background-color: $main-color;
+          
+        }
     }
     
     @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-
+        html,
+        body{
+            @include font-size(.6);
+          color: $primary-color;
+          background-color: $main-color;
+          
+        }
     }
     

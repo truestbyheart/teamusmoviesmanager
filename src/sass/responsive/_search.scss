@@ -115,7 +115,31 @@
 
 /* iPhone 5 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  input.search-mobile__box {
+    display: none;
+  }
+  .search-area {
+    display: none;
+  }
+  .search-tablet{
+    margin: 1% 30% 0 30%;
+    position: relative;
+    display: block;
+    &__box {
+      width: 100%;
+      padding: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      position: absolute;
+    }
+
+    &__icon {
+      position: absolute;
+      color: $primary-dark;
+      @include font-size(0.7);
+    }
+  }
+
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {

@@ -78,7 +78,22 @@
   
   /* iPhone 5 ----------- */
   @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-  /* Styles */
+    div.left {
+      & a,
+      a:link,
+      a:visited {
+        padding: 4rem 0.4rem;
+      }
+    }
+    div.right {
+      margin-top: 1%;
+      & a,
+      a:link,
+      a:visited {
+        padding: 4rem 0.4rem;
+        margin-left: -39px;
+      }
+    }
   }
   
   @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){

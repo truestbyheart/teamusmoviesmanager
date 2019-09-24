@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
   }
   showPopular(): void {
     this.api.getTrending().subscribe((data: Array<object>) => {
-      const { results } = data;
-      this.list = results;
+      // const { results } = data;
+      // this.list = results;
     });
   }
 }
